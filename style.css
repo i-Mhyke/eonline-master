@@ -1,0 +1,236 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* LOGO */
+main {
+    /* border: 1px solid red; */
+}
+
+.logo-div {
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: 2em auto 1em auto;
+}
+
+/* OPTION DIV */
+.option-div {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding: 0 3em;
+    font-size: 85%;
+    margin-bottom: 1em;
+}
+
+.option-div h2 {
+    color: #333;
+    text-align: center;
+    padding: .4em 0;
+}
+
+.toggle {
+    border-bottom: 2px solid #FF9671;
+}
+
+/* LOGIN FORM */
+
+#login {
+    /* border: 1px solid black; */
+    /* display: none; */
+    padding: 1em 2.5em;
+}
+
+.login-input {
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 1.2em 2em;
+    border: 1px solid transparent;
+    background: #eee;
+    border-radius: 5px;
+}
+
+#login label {
+    /* border: 1px solid black; */
+    color: #333;
+    font-size: 120%;
+}
+
+#login-btn {
+    width: 100%;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding: 1.2em 2em;
+    color: white;
+    background: #FF9671;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 100%;
+    font-weight: 600;
+}
+
+#login-btn:hover {
+    opacity: 0.9;
+}
+
+/* SIGNUP DIV */
+.signup-div {
+    /* border: 1px solid black; */
+    /* display: none; */
+}
+
+#choice {
+    padding: 2em 2.5em;
+    display: none;
+    /* border: 1px solid black; */
+}
+
+#choice .btn-div {
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+#choice button {
+    padding: 2em;
+    width: 100%;
+    padding: 1.2em 2em;
+    color: white;
+    background: #FF9671;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 1.5em auto;
+    font-size: 110%;
+}
+
+#choice button:hover {
+    opacity: 0.9;
+}
+
+
+/* SIGNUP FORMS */
+
+/* CONSUMER FORM */
+
+#consumer-signup {
+    /* border: 1px solid black; */
+    padding: 0 2.5em;
+    margin-top: 2.5em;
+    display: none;
+}
+
+#consumer-signup input {
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    border: 1px solid transparent;
+    margin: 1.5em auto;
+    border-radius: 5px;
+}
+
+#consumer-signup input[type=text],
+#consumer-signup input[type=password],
+#consumer-signup input[type=email] {
+    background: #eee;
+    font-size: 90%;
+}
+
+#consumer-signup input[type=submit] {
+    background: #FF9671;
+    margin-top: 1.5em;
+    color: white;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+#consumer-signup input[type=submit]:hover {
+    opacity: 0.9;
+}
+
+/* WHOLESALER FORM */
+
+#wholesaler-signup {
+    padding: 0 2.5em;
+    display: none;
+}
+
+#wholesaler-signup input {
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    border: 1px solid transparent;
+    margin: 1.5em auto;
+    border-radius: 5px;
+}
+
+#wholesaler-signup input[type=text],
+#wholesaler-signup input[type=password],
+#wholesaler-signup input[type=email],
+#wholesaler-signup input[type=tel] {
+    background: #eee;
+    font-size: 90%;
+}
+
+#wholesaler-signup input[type=submit] {
+    background: #FF9671;
+    margin-top: 2.5em;
+    color: white;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+#wholesaler-signup input[type=submit]:hover {
+    opacity: 0.9;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media(min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        grid-template-areas: 'form hero';
+        height: 100vh;
+    }
+
+    .hero {
+        background: url('./hero-desktop.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: hero;
+    }
+
+    main {
+        grid-area: form;
+    }
+
+    .logo-div {
+        width: 50%;
+        margin: 2em auto;
+    }
+
+    .option-div {
+        margin-bottom: 2em;
+    }
+
+    #consumer-signup input[type=submit] {
+        margin-top: 2.5em;
+    }
+    
+
+
+}
