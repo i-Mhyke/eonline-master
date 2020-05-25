@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Everything Online | Login | Signup </title>
+</head>
+<body>
+    <div class="hero">
+
+    </div>
+
+    <main>
+        <div class="logo-div">
+            <img src="logo_gtvrub.jpg" alt="">
+        </div>
+
+        <div class="option-div">
+            <h2 class="login toggle" id="login-head">Log In</h2>
+            <h2 class="signup" id="signup-head">Sign Up</h2>
+        </div>
+
+        <form action="" id="login" method="POST" enctype="application/x-www-form-urlencoded">
+            <label for="login-email">Email Address</label><br/>
+            <input type="email" name="login-email" id="login-email" class="login-input" required><br/>
+
+            <label for="login-password">Password</label><br/>
+            <input type="password" name="login-password" id="login-password" class="login-input" required><br/>
+
+            <input type="submit" value="LOG IN" id="login-btn">
+        </form>
+
+        <div class="signup-div">
+            <div id="choice">
+                <div class="btn-div">
+                    <button id="consumer">Sign up as consumer</button>
+                </div>
+                <div class="btn-div">
+                    <button id="wholesaler">Sign up as wholesaler</button>
+                </div>
+            </div>
+
+            <form action="" id="consumer-signup" class="signup-form" method="POST" enctype="application/x-www-form-urlencoded">
+                <input type="text" name="firstName" id="sc-firstname" placeholder="First name" required>
+                <input type="text" name="lastName" id="sc-lastname" placeholder="Last name" required>
+                <input type="email" name="email" id="sc-email" placeholder="Email Address" required>
+                <input type="password" name="password" id="sc-password" placeholder="Password" required>
+                <input type="submit" value="SIGN UP">
+            </form>
+
+            <form action="" id="wholesaler-signup" class="signup-form" method="POST" enctype="application/x-www-form-urlencoded">
+                <input type="text" name="firstName" id="sw-firstname" placeholder="First name" required>
+                <input type="text" name="lastName" id="sw-lastname" placeholder="Last name" required>
+                <input type="email" name="email" id="sw-email" placeholder="Email Address" required>
+                <input type="password" name="password" id="sw-password" placeholder="Password" required>
+                <input type="tel" name="phoneNumber" id="sw-number" placeholder="Phone number" required>
+                <input type="text" name="shopAddress" id="sw-address" placeholder="Shop Address" required>
+                <input type="submit" value="SIGN UP">
+            </form>
+        </div>
+
+
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
