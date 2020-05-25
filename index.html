@@ -13,7 +13,7 @@
                 <div class="container nav-menu-container">
                     <div id="logo">
                         <h1>
-                            <div class="menu-icon"><i class="fas fa-bars"></i></div>
+                            <div class="menu-icon" onclick="openNav()"><i class="fas fa-bars"></i></div>
                             <a href="#" class="logo"> EvOnline </a>
                         </h1>
                     </div>
@@ -24,7 +24,7 @@
                         <a href="#" class="nav-item">CONTACT</a>
                     </div>
                     <div class="icons">
-                        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="icon" id="myBtn"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="icon hrt"><i class="fas fa-heart"></i></a>
                         <a href="signup.html" class="login-button"> LOGIN</a>
                     </div>
@@ -174,6 +174,27 @@
                 </div>
             </div>
         </footer>
-    <script src="/javascript/script.js"></script>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          
+          </div>
+        <div id="mySidenav" class="sidenav">
+            <h1 class="logo"> EvOnline </h1>
+            <hr>
+            <h4 class="sidenav-cat"> Categories </h4>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Agro Products</a>
+            <a href="#">Electronics</a>
+            <a href="#">Fashion</a>
+            <a href="#">Food Items</a>
+            <a href="#">Laptops</a>
+            <a href="#">Phones</a>
+          </div>
+    <script src="./javascript/script.js"></script>
 </body>
 </html>
