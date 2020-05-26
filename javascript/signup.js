@@ -12,6 +12,7 @@ let consumerForm = document.querySelector('#consumer-signup');
 let wholesalerForm = document.querySelector('#wholesaler-signup');
 let output = document.querySelector('#output');
 let success = document.querySelector('#success');
+let loading = document.querySelector('#loading');
 
 //EVENT LISTENERS
 optionDiv.addEventListener('click', toggleBorder);
@@ -71,6 +72,8 @@ function submitConsumerForm(e) {
     let email = document.querySelector('#sc-email').value;
     let password = document.querySelector('#sc-password').value;
 
+    loading.innerHTML = `<p> Loading...</p>`
+
     fetch('https://evonline.herokuapp.com/api/v1/signup', {
         method: 'POST',
         headers: {
@@ -104,8 +107,10 @@ function submitConsumerForm(e) {
             }
             output.innerHTML = `<p>Sign up successful!</p>`
         }
+    loading.innerHTML = '';
         
     })
+
 };
 
 function submitWholesalerForm(e) {
@@ -118,6 +123,7 @@ function submitWholesalerForm(e) {
     let phoneNumber = document.querySelector('#sw-number').value;
     let shopAddress = document.querySelector('#sw-address').value;
 
+    loading.innerHTML = `<p> Loading...</p>`
 
     fetch('https://evonline.herokuapp.com/api/v1/signup/wholesaler', {
         method: 'POST',
@@ -154,8 +160,10 @@ function submitWholesalerForm(e) {
             }
             output.innerHTML = `<p>Sign up successful!</p>`
         }
+        loading.innerHTML = '';
        
     })
+
 };
 
 function submitLoginForm(e) {
@@ -163,6 +171,8 @@ function submitLoginForm(e) {
 
     let email = document.querySelector('#login-email').value;
     let password = document.querySelector('#login-password').value;
+
+    loading.innerHTML = `<p> Loading...</p>`
 
     fetch('https://evonline.herokuapp.com/api/v1/login', {
         method: 'POST',
@@ -203,11 +213,10 @@ function submitLoginForm(e) {
             //  <a href="/public/inner pages/newlandingpage.html" class="lol">Home</a>                  
             // `
             output.innerHTML = `<p>Log in successful!</p>  
-             <a href="index.html" class="lol">Home</a>                  
+             <a href="./../index.html" class="lol">Home</a>                  
             `
-            
         }
-
+        loading.innerHTML = '';
     })
 
     // output.innerHTML+= '<a href="/public/inner pages/newlandingpage.html">Home</a>'
