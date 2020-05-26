@@ -88,6 +88,8 @@ img {
 /* LOGO */
 main {
     /* border: 1px solid red; */
+    text-align: center;
+
 }
 
 .logo-div {
@@ -130,6 +132,7 @@ main {
 
 .toggle {
     border-bottom: 2px solid #FF9671;
+    
 }
 
 /* LOGIN FORM */
@@ -161,15 +164,20 @@ main {
     margin-top: 2em;
     padding: 1.2em 2em;
     color: white;
-    background: #FF9671;
+    background: #e8914a;
     border: 1px solid transparent;
     border-radius: 5px;
     font-size: 100%;
     font-weight: 600;
+    width: 80%;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
 }
 
 #login-btn:hover {
-    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 /* SIGNUP DIV */
@@ -194,11 +202,14 @@ main {
     width: 100%;
     padding: 1.2em 2em;
     color: white;
-    background: #FF9671;
+    background: #e8914a;
     border: 1px solid transparent;
     border-radius: 5px;
     margin: 1.5em auto;
     font-size: 110%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+
 }
 
 #choice button:hover {
@@ -234,15 +245,19 @@ main {
 }
 
 #consumer-signup input[type=submit] {
-    background: #FF9671;
+    background: #e8914a;
     margin-top: 1.5em;
     color: white;
     font-weight: 600;
     font-size: 90%;
+    width: 80%;
+    border-radius: 1.5rem;
+    cursor: pointer;
 }
 
 #consumer-signup input[type=submit]:hover {
-    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 /* WHOLESALER FORM */
@@ -270,19 +285,42 @@ main {
 }
 
 #wholesaler-signup input[type=submit] {
-    background: #FF9671;
+    background: #e8914a;
     margin-top: 1.5em;
     color: white;
     font-weight: 600;
     font-size: 90%;
+    width: 80%;
+    border-radius: 1.5rem;
+    cursor: pointer;
+
 }
 
 #wholesaler-signup input[type=submit]:hover {
-    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
-
-
+ ::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  .card{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    word-wrap: break-word;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding-top: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 30px;
+    width: 70%;
+}
+#login-head,
+#signup-head{
+    cursor: pointer;
+}
 
 /* MEDIA QUERIES */
 @media(min-width: 768px) {
@@ -294,14 +332,17 @@ main {
     }
 
     .hero {
-        background: url('/public/hero-desktop.jpg');
+        background: url('./../onlineshop.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         grid-area: hero;
+        padding: 5rem;
+        margin-top: 100px;
     }
 
     main {
         grid-area: form;
+        text-align: center;
     }
 
     .logo-div {
@@ -324,6 +365,25 @@ main {
     #wholesaler-signup input[type=submit] {
         margin-top: 2.5em;
     }
+    .card{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #ffffff;
+        word-wrap: break-word;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 5px;
+        padding-top: 2rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 30px;
+        width: 70%;
+    }
 
-
+}
+@media (max-width: 560px){
+    .card{
+        width: 90%;
+        padding: 0;
+        margin-top: 3rem;
+    }
 }
