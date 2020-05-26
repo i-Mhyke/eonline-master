@@ -199,8 +199,11 @@ function submitLoginForm(e) {
             if(!output.classList.contains('success')){
                 output.classList.toggle('success');
             }
+            // output.innerHTML = `<p>Log in successful!</p>  
+            //  <a href="/public/inner pages/newlandingpage.html" class="lol">Home</a>                  
+            // `
             output.innerHTML = `<p>Log in successful!</p>  
-            <a href="/public/inner pages/newlandingpage.html" class="lol">Home</a>                  
+             <a href="index.html" class="lol">Home</a>                  
             `
             
         }
