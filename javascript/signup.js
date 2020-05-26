@@ -1,6 +1,3 @@
-// function displayForm(e) {
-//     console.log('yes');
-// }
 // SELECTING ELEMENTS
 let loginHead = document.querySelector('#login-head');
 let signupHead = document.querySelector('#signup-head');
@@ -12,7 +9,6 @@ let consumerForm = document.querySelector('#consumer-signup');
 let wholesalerForm = document.querySelector('#wholesaler-signup');
 let output = document.querySelector('#output');
 let success = document.querySelector('#success');
-let loading = document.querySelector('#loading');
 
 //EVENT LISTENERS
 optionDiv.addEventListener('click', toggleBorder);
@@ -107,10 +103,8 @@ function submitConsumerForm(e) {
             }
             output.innerHTML = `<p>Sign up successful!</p>`
         }
-    loading.innerHTML = '';
-        
+        loading.innerHTML = '';
     })
-
 };
 
 function submitWholesalerForm(e) {
@@ -161,9 +155,8 @@ function submitWholesalerForm(e) {
             output.innerHTML = `<p>Sign up successful!</p>`
         }
         loading.innerHTML = '';
-       
-    })
 
+    })
 };
 
 function submitLoginForm(e) {
@@ -191,7 +184,7 @@ function submitLoginForm(e) {
         // if(data.status=='Fail') {
         //     output.innerHTML = `<p>${data.error}</p>`;   
         // }
-
+        
         output.style.display = 'block';
         if(data.status==='Fail') {
             // console.log('yes');
@@ -210,11 +203,13 @@ function submitLoginForm(e) {
                 output.classList.toggle('success');
             }
             // output.innerHTML = `<p>Log in successful!</p>  
-            //  <a href="/public/inner pages/newlandingpage.html" class="lol">Home</a>                  
+            // <a href="/public/inner pages/newlandingpage.html" class="lol">Home</a>                  
             // `
             output.innerHTML = `<p>Log in successful!</p>  
-             <a href="./../index.html" class="lol">Home</a>                  
+             <a href="./index.html" class="lol">Home</a>                  
             `
+            localStorage.setItem('token', data.token);
+            console.log(localStorage.getItem('token'));
         }
         loading.innerHTML = '';
     })
