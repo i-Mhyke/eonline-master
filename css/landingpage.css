@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6{
     border-left: 4px solid #e8914a;
 }
 .menu-icon{
+  display: none;
     color: whitesmoke;
     font-size: 2rem;
     display: inline-block;
@@ -108,6 +109,9 @@ h1, h2, h3, h4, h5, h6{
 .login-button:hover{
     color: #e8914a;
     background-color: transparent;
+}
+.sidenav .login-button{
+  margin-top: auto;
 }
 .header-button{
     color: #e8914a;
@@ -385,7 +389,7 @@ input:focus{
   z-index: 1200;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -463,6 +467,9 @@ input:focus{
   .sidenav a {font-size: 18px;}
 }
 @media (max-width: 990px){
+  .menu-icon{
+    display: inline-block;
+  }
     .header .nav-item{
         display: none;
     }
