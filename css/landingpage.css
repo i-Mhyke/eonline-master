@@ -81,10 +81,9 @@ h1, h2, h3, h4, h5, h6{
     border-left: 4px solid #e8914a;
 }
 .menu-icon{
-  display: none;
+    display: none;
     color: whitesmoke;
     font-size: 2rem;
-    display: inline-block;
     margin-right: 10px;
     margin-left: 1rem;
 }
