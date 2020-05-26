@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.6rem;
+    padding: 1.2rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6{
     z-index: 1030;
 } 
 .logo{
-    font-size: 34px;
+    font-size: 2rem;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -136,6 +136,9 @@ h1, h2, h3, h4, h5, h6{
     padding-top: 25px;
     line-height: 0.5;
     display: inline-block;
+}
+.nav-item:hover{
+    color: #e8914a;
 }
 .flex-center {
     display: flex;
@@ -382,6 +385,7 @@ input:focus{
     margin-bottom: 50px;
 }
 .sidenav {
+  display: none;
   height: 100%;
   width: 0;
   position: fixed;
@@ -399,13 +403,14 @@ input:focus{
   border-left: transparent;
   border-right: transparent;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1rem;
   color: #818181;
   display: block;
   transition: 0.3s;
 }
-.sidenav a:hover {
+.sidenav a:hover .nav-text{
   color: #f1f1f1;
+  padding-left: 0.5rem;
 }
 .sidenav .closebtn {
   position: absolute;
@@ -417,6 +422,11 @@ input:focus{
 }
 .sidenav h1{
   margin-bottom: 1rem;
+}
+.nav-icon{
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
 }
 .sidenav-cat{
   text-align: center;
@@ -466,8 +476,20 @@ input:focus{
   .sidenav a {font-size: 18px;}
 }
 @media (max-width: 990px){
+  .logo, .menu-icon{
+    font-size: 1.5rem;
+  }
+  .nav-menu-container{
+    padding: 0.6rem;
+  }
+  .icon{
+    padding: 0;
+  }
   .menu-icon{
     display: inline-block;
+  }
+  .sidenav{
+    display: block;
   }
     .header .nav-item{
         display: none;
@@ -487,6 +509,10 @@ input:focus{
       }
       footer{
         padding: 2rem;
+      }
+      .login-button, .header-button{
+        font-size: 1rem;
+        font-weight: 600;
       }
 }  
 @media (max-width: 570px){
