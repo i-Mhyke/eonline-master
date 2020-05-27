@@ -206,7 +206,7 @@ function submitLoginForm(e) {
             // <a href="/public/inner pages/newlandingpage.html" class="lol">Home</a>                  
             // `
             output.innerHTML = `<p>Log in successful!</p>  
-             <a href="./index.html" class="lol">Home</a>                  
+             <a href="./newlandingpage.html" class="lol">Home</a>                  
             `
             localStorage.setItem('token', data.token);
             console.log(localStorage.getItem('token'));

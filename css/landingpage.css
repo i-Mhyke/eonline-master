@@ -489,6 +489,15 @@ input:focus{
   left: 0;
   z-index: 1500;
 }
+.footer-subscribe .btn {
+  color: white;
+  background: #e8914a;
+  border: 1px solid transparent;
+}
+
+.footer-subscribe .btn:hover {
+  background: #d1752a;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
