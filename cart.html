@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="https://kit.fontawesome.com/8eaa0a7b1b.js" crossorigin="anonymous"></script>
+    <title>Everything Online|Home</title>
+</head>
+<body>
+        <header class="header">
+                <div class="container nav-menu-container">
+                    <div id="logo">
+                        <h1>
+                            <div class="menu-icon" onclick="openNav()"><i class="fas fa-bars"></i></div>
+                            <a href="#" class="logo"> EvOnline </a>
+                        </h1>
+                    </div>
+                    <div class="nav-menu">
+                        <a href="#" class="nav-item">HOME</a>
+                        <a href="#" class="nav-item">SHOP</a>
+                        <a href="#" class="nav-item">MERCHANT</a>
+                        <a href="#" class="nav-item">CONTACT</a>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="icon" id="myBtn"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="icon hrt"><i class="fas fa-heart"></i></a>
+                        <a href="signup.html" class="login-button"> LOGIN</a>
+                    </div>
+                </div>
+                <div class="flex-center">
+                    <h1 class="bg-content">
+                        CART LIST
+                    </h1>
+                </div>
+        </header>
+        <main class="section">
+            <div class="container">
+                <div class="cart-card">
+                    <div class="cart-card-header">
+                        <h2>Cart Items</h2>
+                    </div>
+                    <div class="cart-card-body">
+                        <div class="cart-container">
+                            <div class="col-3 table-header">
+                                <h3>Product</h3>
+                            </div>
+                            <div class="col-3 table-header">
+                                <h3>Price</h3>
+                            </div>
+                            <div class="col-3 table-header">
+                                <h3>Quantity</h3>
+                            </div>
+                            <div class="col-3 table-header">
+                                <h3>Total</h3>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="cart-container" id="cart-container">
+
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-9">
+                                <h3> Total Amount: </h3>
+                            </div>
+                            <div class="col-3">
+                                <h3 class="currency">₦ </h3>
+                                <h3 class="overall-price" id="overall-price"></h3>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </main>
+            <footer class="section">
+                <div class="container">
+                    <div class="footer-subscribe">
+                        <h4>Subscribe to out News letter to get latest info about promotions.</h4>
+                        <input type="text" placeholder="Input your email">
+                        
+                    </div>
+                    <div class="row">
+                        <div style="padding: 0px 10px 0px 0px;" class="col-4">
+                            <div id="logo">
+                                <h1><a href="#" class="logo"> EvOnline </a></h1>
+                            </div>
+                                <p class="about-footer">Everything Online offers you the great opportunities to maximize your shopping experience by providing you direct access to real time dealers of top products in Nigeria and beyond. <br>
+                                It doesn't just end with buyers alone, We are also passionate about increasing sales of business owners by empowering them with real time access to customers around Nigeria.  </p>
+                        </div>
+                        <div class="footer-categories col-4">
+                            <h3>TOP CATEGORIES</h3>
+                            <div class="footer-nav-menu">
+                                <a href="#" class="nav-item">Agro Products</a>
+                                <a href="#" class="nav-item">Electronics</a>
+                                <a href="#" class="nav-item">Laptops</a>
+                                <a href="#" class="nav-item">Personal Care</a>
+                                <a href="#" class="nav-item">Fashion</a>
+                                <a href="#" class="nav-item">School Supplies</a>
+                            </div>
+                        </div>
+                        <div class="col-4 footer-menu">
+                            <h3> Menu </h3>
+                            <div class="footer-nav-menu">
+                                <a href="#" class="nav-item">HOME</a>
+                                <a href="#" class="nav-item">MERCHANT SHOP</a>
+                                <a href="#" class="nav-item">BECOME A MERCHANT</a>
+                                <a href="#" class="nav-item">CONTACT US</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        <div id="mySidenav" class="sidenav">
+            <h1 class="logo"> EvOnline </h1>
+            <hr>
+            <!-- <h4 class="sidenav-cat"> Categories </h4> -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#"><i class="fas fa-home nav-icon"></i><span class="nav-text">HOME</span></a>
+            <a href="#"><i class="fas fa-shopping-bag nav-icon"></i><span class="nav-text">SHOP</span></a>
+            <a href="#"><i class="fas fa-truck nav-icon"></i><span class="nav-text">BECOME A MERCHANT</span></a>
+            <a href="#"><i class="fas fa-address-book nav-icon"></i><span class="nav-text">CONTACT</span></a>
+            <a href="signup.html"><i class="fas fa-sign-in-alt nav-icon"></i><span class="nav-text">LOGIN</span></a>
+            <!-- <a href="#">Phones</a> -->
+        </div>
+        <script src="./javascript/cart.js"></script>
+</body>
+</html>

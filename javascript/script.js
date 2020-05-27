@@ -1,3 +1,6 @@
+const productContainer = document.querySelector('#product-row');
+const messageParent = document.querySelector('#message');
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";
 }
@@ -6,28 +9,84 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-// Get the modal
-var modal = document.getElementById("myModal");
+const getProducts = async () =>{
+        const response = await fetch('https://evonline.herokuapp.com/api/v1/products',{
+          method: 'GET',
+          headers :{
+              "Authorization": `Bearer ${localStorage.getItem('token')}`
+          }
+        })
+        const json = await response.json();
+        console.log(json)
+         if(json.status = 'success' || 'Success'){
+          let products = json.data;
+          let template = '';
+           products.map((product) =>{
+            template += `<div class="col-3 the-products">
+            <div class="product-card">
+                <div id="product-id" style="display:none">${product._id}</div>
+                <img class="product-card-img" src="https://evonline.herokuapp.com/api/v1/${product.image}">
+                <h4 class="product-name"> ${product.name}</h4>
+                <h5 class="product-price"> ₦ <span>${product.price} <span> </h5>
+                <div class="product-card-footer">
+                <a style="color: #e8914a;" id="${product._id}" class="cart-button icon">Add to cart</a>
+                <a href="#" style="color: crimson;" class="icon"><i class="far fa-heart"></i></a>
+                </div>
+            </div>
+          </div>
+          `
+        })
+        productContainer.insertAdjacentHTML("afterbegin", template);
+      }
+};
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+const addProductToCart = async () =>{
+      await getProducts();
+      const myProducts = document.getElementsByClassName('cart-button');
+      for(i= 0; i< myProducts.length; i++){
+        myProducts[i].addEventListener("click", function() {
+              addToCart(this.id);
+      });
+    }
+    const addToCart = async (theProduct) =>{
+        const response = await fetch(`https://evonline.herokuapp.com/api/v1/cart/me/${theProduct}`, {
+          method: 'PUT',
+          headers :{
+            "Authorization": `Beare ${localStorage.getItem('token')}`
+        }
+        })  
+        const json = await response.json();
+        console.log(json);
+        if(json.status === "Fail" || json.status === "fail"){
+          let error = json.error;
+          let template = '';
+          template+=`<h2 class=".alert .alert-primary .fixed-top">${error} Please login to add product to cart </h2>`
+          messageParent.insertAdjacentHTML('afterbegin', template)
+        }
+    }
 }
+addProductToCart();
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
