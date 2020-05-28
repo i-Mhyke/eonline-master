@@ -68,6 +68,7 @@ function submitConsumerForm(e) {
     let email = document.querySelector('#sc-email').value;
     let password = document.querySelector('#sc-password').value;
 
+    output.innerHTML = '';
     loading.innerHTML = `<p> Loading...</p>`
 
     fetch('https://evonline.herokuapp.com/api/v1/signup', {
@@ -117,6 +118,7 @@ function submitWholesalerForm(e) {
     let phoneNumber = document.querySelector('#sw-number').value;
     let shopAddress = document.querySelector('#sw-address').value;
 
+    output.innerHTML = '';
     loading.innerHTML = `<p> Loading...</p>`
 
     fetch('https://evonline.herokuapp.com/api/v1/signup/wholesaler', {
@@ -152,7 +154,8 @@ function submitWholesalerForm(e) {
             if(!output.classList.contains('success')){
                 output.classList.toggle('success');
             }
-            output.innerHTML = `<p>Sign up successful!</p>`
+            output.innerHTML = `<p>Sign up successful!</p>`;
+            location.reload()
         }
         loading.innerHTML = '';
 
@@ -165,7 +168,8 @@ function submitLoginForm(e) {
     let email = document.querySelector('#login-email').value;
     let password = document.querySelector('#login-password').value;
 
-    loading.innerHTML = `<p> Loading...</p>`
+    output.innerHTML = '';
+    loading.innerHTML = `<p> Loading...</p>`;
 
     fetch('https://evonline.herokuapp.com/api/v1/login', {
         method: 'POST',
@@ -205,9 +209,8 @@ function submitLoginForm(e) {
             // output.innerHTML = `<p>Log in successful!</p>  
             // <a href="/public/inner pages/newlandingpage.html" class="lol">Home</a>                  
             // `
-            output.innerHTML = `<p>Log in successful!</p>  
-             <a href="./newlandingpage.html" class="lol">Home</a>                  
-            `
+            output.innerHTML = `<p>Welcome back ${data.user.First_Name} 😎! Please click  <a href="./newlandingpage.html">Here</a> to continue shopping</p>`
+            loginDiv.reset();
             localStorage.setItem('token', data.token);
             console.log(localStorage.getItem('token'));
         }

@@ -20,8 +20,9 @@ img {
 
 #output a {
     text-decoration: none;
-    border: 1px solid black;
-    display: block
+    color: #e8914a;
+    /* border: 1px solid black;
+    display: block */
 }
 
 .lol {
@@ -80,7 +81,7 @@ img {
     color: white;
     border-radius: 5px;
     font-size: 90%;
-    background: rgb(0, 139, 194);
+    background: #eba267;
 }
 
 /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
@@ -177,7 +178,9 @@ main {
 
 #login-btn:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+}
+#login-btn:active{
+    outline: none;
 }
 
 /* SIGNUP DIV */
@@ -257,9 +260,10 @@ main {
 
 #consumer-signup input[type=submit]:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
-
+#consumer-signup input[type=submit]:active{
+    outline: none;
+}
 /* WHOLESALER FORM */
 
 #wholesaler-signup {
@@ -298,7 +302,9 @@ main {
 
 #wholesaler-signup input[type=submit]:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+}
+#wholesaler-signup input[type=submit]:active{
+    outline: none;
 }
 
  ::-webkit-input-placeholder {

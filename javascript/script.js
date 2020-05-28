@@ -59,17 +59,11 @@ const addProductToCart = async () =>{
         })  
         const json = await response.json();
         console.log(json);
-        if(json.status === "Fail" || json.status === "fail"){
+        if(json.data){
           console.log('error');
-          let error = json.error;
-          let template = '';
-          template+=`<h2 class=".alert .alert-primary .fixed-top">${error} Please login to add product to cart </h2>`
-          messageParent.insertAdjacentHTML('afterbegin', template)
-        }
-        else if(json.status === "success" || json.status === "Success"){
-          confirmMessage.innerHTML = 'Product Successfully Added to Cart'
+          confirmMessage.innerHTML = `Product Successfully Added to Cart`
           console.log("good");
-        };
+        }
     }
 }
 addProductToCart();
