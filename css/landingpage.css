@@ -488,13 +488,22 @@ input[type=submit]{
   background-color: #cce5ff;
   border-color: #b8daff;
 }
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
 .fixed-top {
   position: fixed;
-  top: 0;
+  top: 3rem;
   right: 0;
   left: 0;
-  z-index: 1500;
+  z-index: 2000;
 }
+#message{
+  width: 20rem;
+  margin-left: auto;
+  }
 .footer-subscribe .btn {
   color: white;
   background: #e8914a;

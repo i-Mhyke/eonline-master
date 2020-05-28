@@ -60,9 +60,20 @@ const addProductToCart = async () =>{
         const json = await response.json();
         console.log(json);
         if(json.data){
-          console.log('error');
-          confirmMessage.innerHTML = `Product Successfully Added to Cart`
+          messageParent.insertAdjacentHTML('afterbegin', `<div style="padding: 5px;">
+                                                            <div class="alert alert-primary">
+                                                             Product Added to Cart Successfully
+                                                              </div>
+                                                           </div>`)
           console.log("good");
+        }
+        else if(json.Error){
+          messageParent.insertAdjacentHTML('afterbegin', `<div style="padding: 5px;">
+          <div class="alert alert-warning">
+           Product Already Added To Cart. Please Check Your Cart if you want more Quantities Of The Product
+            </div>
+         </div>`)
+          console.log("Sorry");
         }
     }
 }
