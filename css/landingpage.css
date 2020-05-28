@@ -301,6 +301,7 @@ h1, h2, h3, h4, h5, h6{
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     border-radius: 0.25rem;
     margin-top: 3rem;
 }
@@ -315,9 +316,8 @@ h1, h2, h3, h4, h5, h6{
     border-top-right-radius: calc(0.25rem - 1px);
 }
 .product-card-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+   margin-top: 1rem;
+   padding-bottom: 1rem;
 }
 .product-name{
     margin-left: 10px;
@@ -495,7 +495,7 @@ input[type=submit]{
 }
 .fixed-top {
   position: fixed;
-  top: 3rem;
+  top: 5rem;
   right: 0;
   left: 0;
   z-index: 2000;
@@ -513,7 +513,17 @@ input[type=submit]{
 .footer-subscribe .btn:hover {
   background: #d1752a;
 }
-
+.cart-button{
+  background-color: #f59d54;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}

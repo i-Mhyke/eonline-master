@@ -403,20 +403,30 @@ input:focus{
       margin-top: 1.5rem;
   }
   .decrement, .increment{
-      background-color: darkslategrey;
-      border: 1px solid darkslategrey;
+      background-color: #56a799;
+      border: 1px solid #56a799;
       color: whitesmoke;
-      padding: 0.5rem;
+      font-size: 1.2rem;
+      padding: 0.2rem;
+  }
+  .decrement{
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   }
   .quantity-value{
-      padding: 0.5rem;
-      font-size: 1rem;
+      padding: 0.2rem;
+      font-size: 1.2rem;
+  }
+  .multiplier{
+    margin: 0px 5px 0px 5px;
   }
   .total-price, .currency, .overall-price{
     display: inline-block;
   }
   #itemName{
     margin-left: 1rem;
+  }
+  li{
+    list-style: none;
   }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
