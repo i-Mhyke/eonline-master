@@ -212,7 +212,7 @@ function submitLoginForm(e) {
             output.innerHTML = `<p>Welcome back ${data.user.First_Name} 😎! Please click  <a href="./newlandingpage.html">Here</a> to continue shopping</p>`
             loginDiv.reset();
             localStorage.setItem('token', data.token);
-            console.log(localStorage.getItem('token'));
+            location.replace("./newlandingpage.html")
         }
         loading.innerHTML = '';
     })
