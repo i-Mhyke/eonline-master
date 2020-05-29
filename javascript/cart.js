@@ -144,8 +144,6 @@ const checkoutCart = async () =>{
       }
       })
   }
-
-  const wholeItem = document.getElementsByClassName('items');
   const deleteButton = document.getElementsByClassName('tp-remove');
   for(i= 0; i< deleteButton.length; i++){
     deleteButton[i].addEventListener("click", function() {
@@ -153,6 +151,7 @@ const checkoutCart = async () =>{
   })
   }
   const removeProduct  = async (productId) =>{
+    const wholeItem = document.getElementById(`${productId}`);
     const response = await fetch(`https://evonline.herokuapp.com/api/v1/cart/me/${productId}`, {
       method: 'DELETE',
       headers :{
@@ -162,12 +161,7 @@ const checkoutCart = async () =>{
     const json = await response.json();
     if(json.Message){
       console.log(json);
-      console.log(wholeItem);
-      for(i= 0; i< wholeItem.length; i++){
-        if(wholeItem[i].id === productId){
-          wholeItem.innerHTML = ''
-        }
-      }
+      wholeItem.innerHTML = ''
       }
   }
 

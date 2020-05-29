@@ -12,9 +12,9 @@ let success = document.querySelector('#success');
 
 //EVENT LISTENERS
 optionDiv.addEventListener('click', toggleBorder);
-choiceDiv.addEventListener('click', displayForm);
+// choiceDiv.addEventListener('click', displayForm);
 consumerForm.addEventListener('submit', submitConsumerForm);
-wholesalerForm.addEventListener('submit', submitWholesalerForm);
+// wholesalerForm.addEventListener('submit', submitWholesalerForm);
 loginDiv.addEventListener('submit', submitLoginForm);
 
 
@@ -26,10 +26,10 @@ function toggleBorder(e) {
         if(!loginHead.classList.contains('toggle')) {
             loginHead.classList.toggle('toggle');
             signupHead.classList.toggle('toggle');
-            choiceDiv.style.display = 'none';
+            // choiceDiv.style.display = 'none';
             loginDiv.style.display = 'block';
             consumerForm.style.display = 'none';
-            wholesalerForm.style.display = 'none';
+            // wholesalerForm.style.display = 'none';
             output.style.display = 'none';
         }
     }
@@ -39,25 +39,25 @@ function toggleBorder(e) {
             signupHead.classList.toggle('toggle');
             loginHead.classList.toggle('toggle');
             loginDiv.style.display = 'none';
-            choiceDiv.style.display = 'block';
-            consumerForm.style.display = 'none';
-            wholesalerForm.style.display = 'none';
+            // choiceDiv.style.display = 'block';
+            consumerForm.style.display = 'block';
+            // wholesalerForm.style.display = 'none';
             output.style.display = 'none';
         }
     }   
 };
 
-function displayForm(e) {
-    if(e.target.id==='consumer') {
-        choiceDiv.style.display = 'none';
-        consumerForm.style.display = 'block';
-    }
+// function displayForm(e) {
+//     if(e.target.id==='consumer') {
+//         choiceDiv.style.display = 'none';
+//         consumerForm.style.display = 'block';
+//     }
 
-    if(e.target.id==='wholesaler') {
-        choiceDiv.style.display = 'none';
-        wholesalerForm.style.display = 'block';
-    }
-}
+//     if(e.target.id==='wholesaler') {
+//         choiceDiv.style.display = 'none';
+//         wholesalerForm.style.display = 'block';
+//     }
+// }
 
 
 function submitConsumerForm(e) {
