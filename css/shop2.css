@@ -17,7 +17,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: #ddd;
     height: 100%;
 }
 html {
@@ -26,7 +26,6 @@ html {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     height: 100%;
-    scroll-behavior: smooth;
 }
 h1, h2, h3, h4, h5, h6{
 	margin-top: 0;
@@ -35,7 +34,7 @@ h1, h2, h3, h4, h5, h6{
 .header {
   background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.92), rgba(0, 0, 0, 0.88)),
    url("../bg-image4.jpg");
-  height: 100%; 
+  height: 80%; 
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,7 +55,7 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.2rem;
+    padding: 1.6rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -64,7 +63,7 @@ h1, h2, h3, h4, h5, h6{
     z-index: 1030;
 } 
 .logo{
-    font-size: 2rem;
+    font-size: 34px;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -82,9 +81,9 @@ h1, h2, h3, h4, h5, h6{
     border-left: 4px solid #e8914a;
 }
 .menu-icon{
-    display: none;
     color: whitesmoke;
     font-size: 2rem;
+    display: inline-block;
     margin-right: 10px;
     margin-left: 1rem;
 }
@@ -110,9 +109,6 @@ h1, h2, h3, h4, h5, h6{
     color: #e8914a;
     background-color: transparent;
 }
-.sidenav .login-button{
-  margin-top: auto;
-}
 .header-button{
     color: #e8914a;
     background-color: transparent;
@@ -130,23 +126,20 @@ h1, h2, h3, h4, h5, h6{
 }
 .nav-item{
     color: whitesmoke;
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 800;
     font-size: 1rem;
     margin: 0px 15px 0px 15px;
-    padding-top: 10px;
+    padding-top: 25px;
     line-height: 0.5;
     display: inline-block;
-}
-.nav-item:hover{
-    color: #e8914a;
 }
 .flex-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 35rem;
+    min-height: 30rem;
     width: 100%;
 }
 .section-header h3 {
@@ -302,7 +295,6 @@ h1, h2, h3, h4, h5, h6{
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     border-radius: 0.25rem;
     margin-top: 3rem;
 }
@@ -317,8 +309,9 @@ h1, h2, h3, h4, h5, h6{
     border-top-right-radius: calc(0.25rem - 1px);
 }
 .product-card-footer{
-   margin-top: 1rem;
-   padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .product-name{
     margin-left: 10px;
@@ -381,25 +374,40 @@ input{
 input:focus{
     outline: none;
 }
-input[type=submit]{
-    width: 25%;
-    border: 1px solid #e8914a;
-    background-color: #e8914a;
-
-}
 .footer-subscribe{
     text-align: center;
     margin-bottom: 50px;
 }
+
+.footer-subscribe .btn {
+  color: white;
+  background: #e8914a;
+  border: 1px solid transparent;
+}
+
+.footer-subscribe .btn:hover {
+  background: #d1752a;
+}
+
+.inputs {
+  /* display: flex; */
+  /* grid-template-columns: 1fr 1fr; */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.inputs input {
+  margin: .5em;
+}
+
 .sidenav {
-  display: none;
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 1200;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -410,14 +418,13 @@ input[type=submit]{
   border-left: transparent;
   border-right: transparent;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 25px;
   color: #818181;
   display: block;
   transition: 0.3s;
 }
-.sidenav a:hover .nav-text{
+.sidenav a:hover {
   color: #f1f1f1;
-  padding-left: 0.5rem;
 }
 .sidenav .closebtn {
   position: absolute;
@@ -430,16 +437,17 @@ input[type=submit]{
 .sidenav h1{
   margin-bottom: 1rem;
 }
-.nav-icon{
-  color: #f1f1f1;
-  font-size: 1.5rem;
-  padding-right: 0.5rem;
-}
 .sidenav-cat{
   text-align: center;
   margin-top: 0.5rem;
   font-size: 1.5rem;
   color: whitesmoke;
+}
+
+#nav-logout {
+  font-weight: bolder;
+  color: white;
+  display: none;
 }
 /* The Modal (background) */
 .modal {
@@ -477,77 +485,12 @@ input[type=submit]{
   text-decoration: none;
   cursor: pointer;
 }
-.alert {
-  position: relative;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-}
-.alert-primary {
-  color: #004085;
-  background-color: #cce5ff;
-  border-color: #b8daff;
-}
-.alert-warning {
-  color: #856404;
-  background-color: #fff3cd;
-  border-color: #ffeeba;
-}
-.fixed-top {
-  position: fixed;
-  top: 5rem;
-  right: 0;
-  left: 0;
-  z-index: 2000;
-}
-#message{
-  width: 20rem;
-  margin-left: auto;
-  }
-.footer-subscribe .btn {
-  color: white;
-  background: #e8914a;
-  border: 1px solid transparent;
-}
 
-.footer-subscribe .btn:hover {
-  background: #d1752a;
-}
-.cart-button{
-  background-color: #f59d54;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  padding: 0.5rem;
-  border-radius: 5px;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
 @media (max-width: 990px){
-  .logo, .menu-icon{
-    font-size: 1.5rem;
-  }
-  .nav-menu-container{
-    padding: 0.6rem;
-  }
-  .icon{
-    padding: 0;
-  }
-  .cart-button{
-    padding: 0.5rem;
-  }
-  .menu-icon{
-    display: inline-block;
-  }
-  .sidenav{
-    display: block;
-  }
     .header .nav-item{
         display: none;
     }
@@ -566,10 +509,6 @@ input[type=submit]{
       }
       footer{
         padding: 2rem;
-      }
-      .login-button, .header-button{
-        font-size: 1rem;
-        font-weight: 600;
       }
 }  
 @media (max-width: 570px){
@@ -603,10 +542,14 @@ input[type=submit]{
     .footer-menu, .footer-categories{
       text-align: left;
     }
-    input, input[type=submit]{
+    input{
       width: 80%;
     }
     .footer-nav-menu .nav-item{
       margin: 0;
+    }
+
+    #nav-logout {
+      display: block;
     }
 }

@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Body of the whole page*/
+html, body {
+    font-family: Arial , Helvetica, sans-serif;
+    height: 100%;
+    line-height: 1.3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #dddddd;
+}
+
+/*global a-tag formatting*/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+/*STYLING FOR SHOP SECTION*/
+.hr {
+    border: 1px rgb(153, 145, 145) solid;
+    margin: 15px 50px 5px 50px;
+}
+
+.hr2 {
+    border: 5px rgb(153, 145, 145)  solid;
+    margin-bottom: 30px;
+}
+
+.text-1 h1 {
+    margin-left: 50px;
+    color: rgb(153, 145, 145);
+    font-size: 14px;
+}
+
+.for-you {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    grid-row-gap: 40px;
+    margin: 0 50px;
+    margin-top: 2px;
+}
+
+.for-you1 {
+    font-family: 'Rubik', sans-serif;
+    transition: all .3s ease-in-out 0s;
+}
+
+.for-you1:hover {
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .08);
+}
+
+.product1 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421021/semo_s15rny.png");
+}
+
+.product2 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421098/garri_jygolh.jpg");
+}
+
+.product3 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421020/palm_tauav7.png");
+}
+.product4 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421100/dry_fish_cwkenr.png");
+}
+
+.product5 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421104/rice2_j6ve67.png");
+}
+
+.product6 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590425874/beans_tnffvm.jpg");
+}
+
+.product7 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421102/men_s_shoe_jozvjn.png");
+}
+
+.product8 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421102/men_s_wrist_watch_shrejk.png");
+}
+
+.product9 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421100/jeansv_nruiz0.png");
+}
+
+.product10 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590425771/vintage_lc3qlf.jpg");
+}
+
+.product11 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590425875/king_n_quen_vbeieq.jpg");
+}
+
+.product12 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590425874/kalgoo_es8v8f.jpg");
+}
+
+.product13 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590425875/tv_ptq1ha.jpg");
+}
+
+.product14 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590425875/kitch_appli_jcmllw.jpg");
+}
+
+.product15 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421102/mac_book_mstc9u.jpg");
+}
+
+.product16 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590421100/electronics_bkki7a.png");
+}
+
+.product17 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590426395/chess_freezer_ndtwyj.jpg");
+}
+
+.product18 {
+    background-image: url("https://res.cloudinary.com/opejinabdul/image/upload/v1590426396/home_theater_c03qu5.jpg");
+}
+
+.production {
+    min-height: 160px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.solution {
+    font-size: .8rem;
+    line-height: 1.2rem;
+    background-color: #fff;
+}
+
+.solution div {
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4rem; 
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.price1 {
+    margin-right: 30px;
+}
+
+.cart {
+    background-color: #e8914a;
+    color: #fff;
+    font-size: .7rem;
+    padding: 2px;
+}
+
+@media (max-width:1260px) {
+    .for-you {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 15px;
+        grid-row-gap: 40px;
+        margin: 0 50px;
+        margin-top: 2px;
+    }
+    .solution div:first-child {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .price1 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .cart {
+        font-size: .8rem;
+        padding: 0;
+        margin-right: 6px;
+    }
+    .price {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width:1080px) {
+    .for-you {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 15px;
+        grid-row-gap: 40px;
+        margin: 0 50px;
+        margin-top: 2px;
+    }
+    .solution div:first-child {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .price1 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .cart {
+        font-size: .8rem;
+        padding: 0;
+        margin-right: 6px;
+    }
+    .price {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width:768px) {
+    .for-you {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 15px;
+        grid-row-gap: 40px;
+        margin: 0 50px;
+        margin-top: 2px;
+    }
+    .solution div:first-child {
+        font-size: .9rem;
+        font-weight: 500;
+    }
+    .price1 {
+        font-size: .9rem;
+        font-weight: 700;
+    }
+    .cart {
+        font-size: .7rem;
+        padding: 0;
+        margin-right: 6px;
+    }
+    .price {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:500px) {
+    .for-you {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        grid-row-gap: 40px;
+        margin: 0 50px;
+        margin-top: 2px;
+    }
+    .solution div:first-child {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    .price1 {
+        font-size: .8rem;
+        font-weight: 700;
+    }
+    .cart {
+        font-size: .6rem;
+        padding: 0;
+    }
+    .price {
+        display: flex;
+        flex: 1;
+    }
+}
+
+@media (max-width:350px) {
+    .for-you {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        grid-row-gap: 40px;
+        margin: 0 50px;
+        margin-top: 2px;
+    }
+    .solution div:first-child {
+        font-size: .6rem;
+        font-weight: 400;
+    }
+    .price1 {
+        font-size: .6rem;
+        font-weight: 600;
+    }
+    .cart {
+        font-size: .4rem;
+        padding: 0;
+    }
+    .price {
+        display: flex;
+    }
+}
+
+/*The Whole footer of the Everything online website*/
+.main-footer {
+    background-color: rgba(50, 50, 50, 0.92);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+.newsletter {
+
+    padding-bottom: 10px;
+}
+
+.newsletter > h5 {
+    text-align: center;
+}
+
+.newsletter form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.newsletter form input {
+    max-width: 100%;
+    padding: 15px 10px;
+    background-color: #313D51;
+    border: .1px #fff solid;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.newsletter form button {
+    max-width: 100%;
+    padding: 15px 30px;
+    background-color: #445268;
+    color: #fff;
+    border: .5px #fff solid;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.newsletter form button:hover {
+    background-color: #e8914a;
+    border: 1px #56a799 solid;
+    color: #fff;
+}
+
+.newsletter form > p {
+    margin-top: 5px;
+    font-size: .8rem;
+    color:  #56a799;
+}
+
+.middle-footer {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column-gap: auto;
+    margin: 3rem 1rem 2rem 2rem;
+    font-family: Roboto,Helvetica,Tahoma,Arial,"Microsoft YaHei";
+}
+
+
+.middle-footer div h3 {
+    font-family: serif; 
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.middle-footer div p {
+    font-family: serif; 
+    font-size: 1em;
+    line-height: 1.2rem;
+}
+
+hr {
+    border: .1px #445268 solid;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif; 
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.media h3,
+.media img {
+    margin-right: 10px;
+}
+
+.lower-footer1,
+.base-footer,
+.lower-footer2 {
+    font-family: serif; 
+    font-size: .75rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.lower-footer1 {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.lower-footer2 {
+    margin-top: 10px;
+}
+ 
+.base-footer{
+    margin-top: 15px;
+}
+
+@media (max-width:400px) {
+    .middle-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .flex-center h1 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .flex-center h3 {
+        font-size: .8rem;
+    }
+    .header-button {
+    color: #e8914a;
+    background-color: transparent;
+    border: .5px solid #e8914a;
+    border-radius: 1rem;
+    padding: .6rem;
+    font-size: .8rem;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    }
+    .newsletter form .btn {
+    max-width: 100%;
+    padding: 5px 15px;
+    border: .5px #fff solid;
+    font-size: 13px;
+    font-weight: 500;
+    }
+    .newsletter form input {
+        max-width: 60%;
+        padding: 6px 18px;
+        border: .1px #fff solid;
+        font-size: 13px;
+        font-weight: 500;
+        margin-right: 2px;
+    }
+    .middle-footer div h3 {
+        font-size: .9rem;
+    }
+    .middle-footer div p {
+        font-size: .9rem;
+        font-weight: 300;
+    }
+}
+
+@media (max-width:768px) {
+    .middle-footer {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
+        margin-left: 50px;
+        }
+        .flex-center h1 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            margin-bottom: 1.2rem;
+        }
+    
+        .flex-center h3 {
+            font-size: 1rem;
+        }
+        .header-button {
+            color: #e8914a;
+            background-color: transparent;
+            border: .5px solid #e8914a;
+            border-radius: 1rem;
+            padding: .8rem 1.2rem;
+            font-size: .8rem;
+            font-weight: 500;
+            font-family: "Montserrat", sans-serif;
+            cursor: pointer;
+            margin-top: 10px;
+            }
+}

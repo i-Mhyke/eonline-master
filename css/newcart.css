@@ -402,7 +402,7 @@
 		 text-align: right;
 		 padding-top: 0;
 		 position: absolute;
-		 top: 50px;
+		 top: 35px;
 		 right: 0;
 	}
 	 .sub-table .copy-block {
@@ -429,7 +429,7 @@
 }
  @media only screen and (max-width: 630px) {
 	 .item .item-block.ib-info {
-		 float: left;
+		 float: right;
 		 width: 100%;
 	}
 	 .item .item-block.ib-qty {

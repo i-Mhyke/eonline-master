@@ -49,7 +49,7 @@ const viewCartPage = async () =>{
         template +=`<li class="item" id="${cartItem._id}">
         <div class="item-main cf">
             <div class="item-block ib-info cf">
-            <img class="product-img" src="https://evonline.herokuapp.com/api/v1/${cartItem.image}">
+                <img class="product-img" src="https://evonline.herokuapp.com/api/v1/${cartItem.image}">
                 <div class="ib-info-meta">
                     <span class="title" id="itemName">${cartItem.name}</span>
                 </div>
@@ -136,23 +136,24 @@ const checkoutCart = async () =>{
       var total = quantity.nextElementSibling;
       var totalValue = total.children;
       console.log(totalValue)
-        totalValue[1].innerHTML = this.id * quantity.children[1].innerHTML;
+      totalValue[1].innerHTML = this.id * quantity.children[1].innerHTML;
 
-        overallPrice.innerHTML = parseInt( overallPrice.innerHTML, 10) - (parseInt(totalValue[1].innerHTML, 10)/ quantity.children[1].innerHTML);
-        taxValue.innerHTML = (5 / 100) * parseInt(overallPrice.innerHTML);
-        overallTotal.innerHTML = parseInt(taxValue.innerHTML) + parseInt(overallPrice.innerHTML);  
+      overallPrice.innerHTML = parseInt( overallPrice.innerHTML, 10) - (parseInt(totalValue[1].innerHTML, 10)/ quantity.children[1].innerHTML);
+      taxValue.innerHTML = (5 / 100) * parseInt(overallPrice.innerHTML);
+      overallTotal.innerHTML = parseInt(taxValue.innerHTML) + parseInt(overallPrice.innerHTML);  
       }
       })
   }
   const deleteButton = document.getElementsByClassName('tp-remove');
   for(i= 0; i< deleteButton.length; i++){
     deleteButton[i].addEventListener("click", function() {
-          removeProduct(this.id);
+        removeProduct(this.id);
   })
   }
-  const removeProduct  = async (productId) =>{
-    const wholeItem = document.getElementById(`${productId}`);
-    const response = await fetch(`https://evonline.herokuapp.com/api/v1/cart/me/${productId}`, {
+  const removeProduct = async (productId) =>{
+      const wholeItem = document.getElementById(`${productId}`);
+      console.log(wholeItem.children[0].children);
+      const response = await fetch(`https://evonline.herokuapp.com/api/v1/cart/me/${productId}`, {
       method: 'DELETE',
       headers :{
         "Authorization": `Bearer ${localStorage.getItem('token')}`
@@ -161,7 +162,7 @@ const checkoutCart = async () =>{
     const json = await response.json();
     if(json.Message){
       console.log(json);
-      wholeItem.innerHTML = ''
+        wholeItem.innerHTML = '';
       }
   }
 
