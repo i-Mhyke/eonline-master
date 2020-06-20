@@ -152,7 +152,7 @@ const checkoutCart = async () =>{
   }
   const removeProduct = async (productId) =>{
       const wholeItem = document.getElementById(`${productId}`);
-      console.log(wholeItem.children[0].children);
+      
       const response = await fetch(`https://evonline.herokuapp.com/api/v1/cart/me/${productId}`, {
       method: 'DELETE',
       headers :{
@@ -161,8 +161,12 @@ const checkoutCart = async () =>{
     })
     const json = await response.json();
     if(json.Message){
-      console.log(json);
+        let wholeItemDiv = wholeItem.children[0].children;
+        let wholeItemPrice = wholeItemDiv[2].children;
         wholeItem.innerHTML = '';
+        overallPrice.innerHTML = parseInt( overallPrice.innerHTML, 10) - parseInt(wholeItemPrice[1].innerHTML, 10);
+        taxValue.innerHTML = (5 / 100) * parseInt(overallPrice.innerHTML);
+        overallTotal.innerHTML = parseInt(taxValue.innerHTML) + parseInt(overallPrice.innerHTML);
       }
   }
 
